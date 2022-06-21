@@ -1,0 +1,32 @@
+{
+  "name": "flash-message",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "type": "module",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build",
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+  },
+  "version": "0.1.0",
+  "description": "Little flash messages library experiment",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matteo-gildone/flash-message.git"
+  },
+  "author": "Matteo Gildone",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matteo-gildone/flash-message/issues"
+  },
+  "homepage": "https://github.com/matteo-gildone/flash-message#readme",
+  "devDependencies": {
+    "babel-jest": "^28.1.1",
+    "jest": "^28.1.1",
+    "parcel": "^2.6.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^28.1.1"
+  }
+}

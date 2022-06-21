@@ -1,0 +1,112 @@
+.c-flash-message__container {
+    z-index: 9999;
+    position: fixed;
+    padding: 4px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+.c-flash-message__item {
+    display: flex;
+	align-items: center;
+	position: relative;
+	width: 100%;
+    box-sizing: border-box;
+    padding: .75rem;
+    background-color: #ccc;
+    border: 1px solid #333;
+    border-left-width: 5px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 16px;
+    font-size: 1rem;
+}
+
+.c-flash-message__itemlast-child {
+    margin-bottom: 0;
+}
+
+.c-flash-message__icon {
+    fill: currentColor;
+	transform: translate(0, 0);
+	display: inline-block;
+	vertical-align: text-top;
+	width: 1rem;
+	height:1rem; 
+    align-self: flex-start;
+    flex: 0 0 auto;
+    margin-right: .5rem;
+}
+
+.c-flash-message__item--success {
+    background-color: rgb(220 252 231);
+    border-color: rgb(20 83 45);
+    color: rgb(20 83 45);
+}
+
+.c-flash-message__item--fail {
+    background-color: rgb(254 226 226);
+    border-color: rgb(127 29 29);
+    color: rgb(127 29 29);
+}
+
+.c-flash-message__item--warning {
+    background-color: rgb(254 249 195);
+    border-color: rgb(113 63 18);
+    color: rgb(113 63 18);
+}
+
+.c-flash-message__item--info {
+    background-color: rgb(219 234 254);
+    border-color: rgb(30 58 138);
+    color: rgb(30 58 138);
+}
+
+.c-flash-message__container[data-position$="-right"] .c-flash-message__item {
+    transform: translateX(110%);
+}
+
+.c-flash-message__container[data-position$="-left"] .c-flash-message__item {
+    transform: translateX(-110%);
+}
+
+.c-flash-message__container[data-position="top-center"] .c-flash-message__item {
+    transform: translateY(-100vh);
+}
+
+.c-flash-message__container[data-position="bottom-center"] .c-flash-message__item {
+    transform: translateY(100vh);
+}
+
+.c-flash-message__container .c-flash-message__item.c-flash-message__item-visible {
+    transform: translate(0, 0);
+}
+
+.c-flash-message__container[data-position^="top-"] {
+    top: 0;
+}
+
+.c-flash-message__container[data-position^="bottom-"] {
+    bottom: 0;
+}
+
+.c-flash-message__container[data-position$="-right"] {
+    right: 0;
+}
+
+.c-flash-message__container[data-position$="-left"] {
+    left: 0;
+}
+ 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
